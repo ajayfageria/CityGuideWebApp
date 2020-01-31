@@ -1,0 +1,19 @@
+
+h1{ 
+  color: green; 
+  text-align: center; 
+} 
+div.one{ 
+  margin-top: -1.4%;
+  margin-bottom: -2.3%; 
+  text-align: center; 
+} 
+button{ 
+  margin-top: 5px; 
+  margin-bottom: 5px;
+  size: 3px;
+} 
+.btn a{
+  color: white;
+  size: 3px;
+}

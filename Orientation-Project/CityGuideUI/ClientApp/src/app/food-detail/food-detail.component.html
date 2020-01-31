@@ -1,0 +1,48 @@
+<!-- Detail View of particular food -->
+<div class="container">
+  
+      <div class="col-md-6">
+        <img [src]="img" >
+      </div>
+      <div class="col-md-6">
+        <img [src]="imgs" >
+      </div>
+     
+    <h2>{{place.Details.name}}</h2>
+  
+    <div class="row">
+        <div class="col-sm-9">
+            <p> {{place.Details.information}} </p>
+        </div>
+  
+        <div class="col-sm-3 info">
+            <div class="card">
+  
+                <div class="card-body">
+                  <h5 class="card-title"><b>Location : </b>{{place.Details.address}}</h5>
+                  <p class="card-text"><b>Nearest Metro : </b>{{place.Details.nearestMetro}}</p>
+                  <p class="card-text"><b>OpeningTime : </b>{{place.Details.openingTime | date:'shortTime'}}</p>
+                  <p class="card-text"><b>ClosingTime : </b>{{place.Details.closingTime | date:'shortTime'}}</p>
+                  <a href="#" class="btn btn-primary">View on Map</a>
+                    
+                </div>
+            </div>
+            <div class="card " style="width: 18rem;">
+              <div class="card-header">
+               <h3>Amenities</h3> 
+              </div>
+              <ul class="list-group list-group-flush">
+                <p class="list-group-item"><b>Food Stalls : </b>{{true == place.Amenities.hasFoodStalls? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Veg : </b>{{true == place.Amenities.hasVeg ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Non-Veg : </b>{{true == place.Amenities.hasNonveg ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item" ><b>Food Packaging : </b>{{true == place.Amenities.hasFoodPackaging ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Online Delivery : </b>{{true == place.Amenities.hasOnlineDelivery ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Food Type : </b>{{place.Amenities.foodType}}</p>
+                
+              </ul>
+            </div>
+            
+        </div>
+        
+  </div>
+  

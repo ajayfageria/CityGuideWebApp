@@ -1,0 +1,58 @@
+<!-- add activity form -->
+<body>
+  <div class="main-block">
+      <div class="left-part">
+        <h1>Add the Activities's Place </h1>
+      </div>
+      <form>
+        <div class="form-group">
+          <label>Activities Place Name</label>
+          <input type="text" #name="ngModel" required class="form-control" [class.is-invalid]="name.invalid && name.touched" name="name" [(ngModel)]="activities.name">        
+        </div>
+        <div class="form-group">
+          <label>Address</label>
+          <input type="text" #address="ngModel" required class="form-control" [class.is-invalid]="address.invalid && address.touched" name="address" [(ngModel)]="activities.address">
+        </div>
+        <div class="form-group">
+          <label>Latitude </label>
+          <input type="number" #latitude="ngModel" required class="form-control" [class.is-invalid]="latitude.invalid && latitude.touched" name="latitude" [(ngModel)]="activities.latitude">
+        </div>
+        <div class="form-group">
+          <label>Longitude</label>
+          <input type="number" #longitude="ngModel" required class="form-control" [class.is-invalid]="longitude.invalid && longitude.touched" name="longitude" [(ngModel)]="activities.longitude">
+        </div>
+        <div class="form-group">
+          <label>Altitude</label>
+          <input type="number" #altitude="ngModel" required class="form-control" [class.is-invalid]="altitude.invalid && altitude.touched" name="altitude" [(ngModel)]="activities.altitude">
+        </div>
+        <div class="form-group">
+          <label>Information</label>
+          <input type="text" #information="ngModel" required class="form-control" [class.is-invalid]="information.invalid && information.touched" name="information" [(ngModel)]="activities.information">
+        </div>
+        <div class="form-group">
+          <label>Nearest Metro</label>
+          <input type="text" #nearestMetro="ngModel" required class="form-control" [class.is-invalid]="nearestMetro.invalid && nearestMetro.touched" name="nearestMetro" [(ngModel)]="activities.nearestMetro">
+        </div>
+        <div class="form-group">
+          <label>Opening Time</label>
+          <input type="time" #openingTime="ngModel" required class="form-control" [class.is-invalid]="openingTime.invalid && openingTime.touched" name="openingTime" [(ngModel)]="activities.openingTime">
+        </div>
+        <div class="form-group">
+          <label>Closing Time</label>
+          <input type="time" #closingTime="ngModel" required class="form-control" [class.is-invalid]="closingTime.invalid && closingTime.touched" name="closingTime" [(ngModel)]="activities.closingTime">
+        </div>
+        <h2><label>Amenities </label> </h2> <br>
+        <div class="form-group">        
+          <input type="checkbox" name="hasElevator" [(ngModel)]="activities.hasElevator"> Elevator<br>
+          <input type="checkbox" name="hasWashroomFacilities" [(ngModel)]="activities.hasWashroomFacilities"> Washroom Facilities <br>
+          <label> Ticket Price </label><br>
+          <input type="number" name="ticketPrice" [(ngModel)]="activities.ticketPrice"><br>  
+          <label> Activity Type </label> <br>
+          <input type="text" name="activityType" [(ngModel)]="activities.activityType"><br>
+          <label> Number of Hours Taken </label> <br>
+          <input type="number" name="noOfHoursTaken" [(ngModel)]="activities.noOfHoursTaken"><br>
+        </div>
+        <button type="submit" (click)="addActivitiesEntity()">Submit</button>
+      </form>
+    </div>
+  </body>

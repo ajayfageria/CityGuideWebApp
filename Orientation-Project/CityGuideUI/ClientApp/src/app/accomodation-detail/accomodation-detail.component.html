@@ -1,0 +1,49 @@
+<!-- Detail view of particular accomodation -->
+<div class="container">
+
+    <div class="col-md-6">
+      <img [src]="img" >
+    </div>
+    <div class="col-md-6">
+      <img [src]="imgs" >
+    </div>
+    
+    <h2>{{place.Details.name}}</h2>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <p> {{place.Details.information}} </p>
+        </div>
+
+        <div class="col-sm-3 info">
+            <div class="card">
+
+                <div class="card-body">
+                  <h5 class="card-title"><b>Location : </b>{{place.Details.address}}</h5>
+                  <p class="card-text"><b>Nearest Metro : </b>{{place.Details.nearestMetro}}</p>
+                  <p class="card-text"><b>OpeningTime : </b>{{place.Details.openingTime | date:'shortTime'}}</p>
+                  <p class="card-text"><b>ClosingTime : </b>{{place.Details.closingTime | date:'shortTime'}}</p>
+                  <a href="#" class="btn btn-primary">View on Map</a>  
+                    
+                </div>
+            </div>
+            <div class="card " style="width: 18rem;">
+              <div class="card-header">
+                  <h3>Amenities</h3>
+              </div>
+              <ul class="list-group list-group-flush">
+                <p class="list-group-item"><b>Internet  : </b>{{true == place.Amenities.hasInternet ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Meeting Rooms : </b>{{true == place.Amenities.hasMeetingRooms ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Fitness Facilities : </b>{{true == place.Amenities.hasFitnessFacilities? 'Yes' : 'No' }}</p>
+                <p class="list-group-item" ><b>Parking  : </b>{{true == place.Amenities.hasParking ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Swimming Pool : </b>{{true == place.Amenities.hasSwimmingPool ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Elevator : </b>{{true == place.Amenities.hasElevator ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Security Guard : </b>{{true == place.Amenities.hasSecurityGuard ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Tv : </b>{{true == place.Amenities.hasTv ? 'Yes' : 'No' }}</p>
+                <p class="list-group-item"><b>Luxery Level: </b>{{place.Amenities.luxeryLevel  }}</p>
+                
+              </ul>
+            </div>
+        </div>
+        
+</div>

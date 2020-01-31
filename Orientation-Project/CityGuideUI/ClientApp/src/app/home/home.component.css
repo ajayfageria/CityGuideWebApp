@@ -1,0 +1,122 @@
+.search-section {
+    background-image: url('src\assets\images\images.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.background-blur{
+    background-color: gray;
+    opacity: 0.9;
+    padding-bottom: 30px;
+}
+.tourist-section{
+    background-color: #222;
+    padding: 30px;
+}
+.activities-section{
+    background-color: gray;
+    padding: 30px;
+}
+.accomodation-section{
+    background-color: #313030;
+    padding: 30px;
+}
+.food-section{
+    background-color: #b8b3b3;
+    padding: 30px;
+}
+
+div.form-group.required>label:first-child::after {
+    content: '*';
+    color: red;
+    padding-left: 5px;
+}
+
+.logo-image {
+    margin-left: 20px;
+    /* margin-top: 10px; */
+    height: 55px;
+    width: 60px;
+}
+
+.nav {
+    font-weight: 600;
+    margin-left: 15%;
+    /* margin-top: 10px; */
+}
+
+.navbar {
+    opacity: 0.7;
+    border-radius: 0;
+    height: 70%;
+}
+
+.nav li a {
+    margin-left: 15px;
+    color: white;
+    margin-top: 10px;
+}
+
+.active {
+    color: rgb(209, 16, 113);
+}
+
+.navbar .container-fluid .navbar-header .navbar-toggle {
+    margin-top: 30px;
+}
+
+.navbar-header {
+    height: 70px;
+}
+
+#titles {
+    background-color: black;
+    opacity: 0.8;
+}
+
+.container {
+    height: 100%;
+}
+
+.search-bar {
+    width: 37%;
+    margin-left: 30%;
+    margin-top: 60px;
+}
+
+.has-search .form-control-feedback {
+    right: initial;
+    left: 5px;
+    color: rgb(156, 50, 50);
+}
+
+.has-search .form-control {
+    padding-left: 40px;
+    color: rgb(156, 50, 50);
+}
+
+.search-bar ::placeholder {
+    color: rgb(156, 50, 50);
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.site_title h1 {
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.site_title p {
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    word-spacing: 4px;
+    margin-top: 10px;
+    color: white;
+    font-weight: lighter;
+}

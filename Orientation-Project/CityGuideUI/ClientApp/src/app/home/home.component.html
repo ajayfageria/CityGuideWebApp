@@ -1,0 +1,53 @@
+<!-- Home page  -->
+<body>
+
+    <div class="search-section">
+        <div class="background-blur">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span>                        
+                </button>
+                        <a [routerLink]="['/logohome']" (click)="rendFunc()" class="navbar-brand"><img class="logo-image" src="assets/images/logo.png"></a>
+
+                    </div>
+                    <div class="collapse navbar-collapse" style="text-align: right;margin: 10px;" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li><a routerLink="/tourists" (click)="render()" class="active" routerLinkActive="active">TOURISTS</a></li>
+                            <li><a routerLink="/activities" (click)="render()" routerLinkActive="active">ACTIVITIES</a></li>
+                            <li><a routerLink="/food" (click)="render()" routerLinkActive="active">FOOD</a></li>
+                            <li><a routerLink="/accommodation" (click)="render()" routerLinkActive="active">ACCOMMODATION</a></li>
+                            <li><a routerLink="/blogs">BLOGS</a></li>
+                            <li><a [routerLink]="['/about-us']">ABOUT US</a></li>
+                            <li><a [routerLink]="['/logohome']" (click)="onLogout()" *ngIf="service.loggedIn()">LOGOUT</a></li>
+                            <li><a [routerLink]="['/user/login']" *ngIf="!service.loggedIn()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            <li><a [routerLink]="['/user/registration']" *ngIf="!service.loggedIn()"><span class="glyphicon glyphicon-sign-up"></span> Sign Up</a></li>
+
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </nav>
+            <router-outlet></router-outlet>
+
+        </div>
+    </div>
+    <div class="tourist-section" *ngIf="isRend">
+
+        <app-tourists-home></app-tourists-home>
+    </div>
+    <div class="activities-section" *ngIf="isRend">
+        <app-activities-home></app-activities-home>
+    </div>
+    <div class="accomodation-section" *ngIf="isRend">
+        <app-accomodation-home></app-accomodation-home>
+    </div>
+    <div class="food-section" *ngIf="isRend">
+        <app-food-home></app-food-home>
+    </div>
+</body>

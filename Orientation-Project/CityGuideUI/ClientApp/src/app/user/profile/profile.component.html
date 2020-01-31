@@ -1,0 +1,14 @@
+<!-- User-profile details -->
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand text-white"></a>
+
+</nav>
+
+<div class="card m-8 col-md-offset-5" style="width:20rem" *ngIf="userDetails">
+    <ul class="list-group">
+        <li class="list-group-item text-center"><strong>My Profile</strong></li>
+        <li class="list-group-item"><strong>Username : </strong>{{userDetails.userName}}</li>
+        <li class="list-group-item"><strong>FullName : </strong>{{userDetails.fullName}}</li>
+        <li class="list-group-item"><strong>Email : </strong>{{userDetails.email}}</li>
+    </ul>
+</div>

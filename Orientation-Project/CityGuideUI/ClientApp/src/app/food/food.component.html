@@ -1,0 +1,22 @@
+<!-- Listing of all food entities -->
+<div class="container">
+
+    <h2><strong>Food</strong></h2>
+    <div class="col-md-3 card-margin" *ngFor=" let place of places">
+        <div class="card">
+            <a routerLink="/food-detail/{{place.name}}/3"  (click)="render()">
+                <div class="card-body">
+
+                    <h4 class="card-title">{{place.name}}</h4>
+
+                    <img [src]="place.image" alt="image">
+
+
+
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

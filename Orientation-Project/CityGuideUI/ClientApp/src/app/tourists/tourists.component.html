@@ -1,0 +1,25 @@
+<!-- List view of tourist entity -->
+<div class="container">
+
+    <h2><strong>Tourists</strong></h2>
+    <div class="col-md-3 card-margin" *ngFor=" let place of places">
+        <div class="card">
+            <a routerLink="/tourist-detail/{{place.name}}/1"  (click)="render()">
+                <div class="card-body col-12" >
+                    <div class=" col-12" > 
+                        <h4 class="card-title">{{place.name}}</h4>  
+                    </div>
+                    <div class="col-12" >
+                        <img [src]="place.image" alt="image">
+                    </div>
+                </div>
+            </a>
+            <div class=" col-12" > 
+                <button class="btn btn-primary ml-2" routerLink="/tourist-edit/{{place.id}}">Edit</button>
+                <button class="btn btn-primary ml-2">Delete</button> 
+            </div>
+        </div>
+        
+    </div>
+
+</div>

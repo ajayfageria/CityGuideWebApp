@@ -1,0 +1,23 @@
+<!-- Add blog form -->
+<body>
+  
+  <div class="main-block">
+      <div class="left-part">
+        <h1>Add the Blog </h1>
+      </div>
+      <form [formGroup]=registerBlogForm (submit)="OnSubmit()">
+        <div class="form-group">
+          <label>Blog Name</label>
+          <input type="text" #name="ngModel" required class="form-control" [class.is-invalid]="name.invalid && name.touched" name="Name" [(ngModel)]="BlogDetails.Name">
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <textarea #description="ngModel" required class="form-control" [class.is-invalid]="description.invalid && description.touched" name="description" [(ngModel)]="BlogDetails.Description"></textarea>
+        </div><br>
+
+        <h3><label> Add Image </label> </h3> <br>
+        <input #imageBlog type="file"/><br>
+        <button type="submit" href="/">Submit</button>
+      </form>
+    </div>
+  </body>

@@ -1,0 +1,22 @@
+<!-- listing of accomodation on home page -->
+<div class="container">
+
+    <h2><strong>ACCOMODATION</strong></h2>
+    <div class="col-md-3 card-margin" *ngFor=" let accomodation of accomodations">
+        <div class="card">
+            <a routerLink="/accomodation-detail/{{accomodation.name}}/4"  (click)="render()">
+                <div class="card-body">
+
+                    <h4 class="card-title">{{accomodation.name}}</h4>
+
+                    <img [src]="accomodation.image" alt="image">
+
+
+
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

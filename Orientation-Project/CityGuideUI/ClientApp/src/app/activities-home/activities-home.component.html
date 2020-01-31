@@ -1,0 +1,22 @@
+<!-- Home activities listing view -->
+<div class="container">
+
+    <h2><strong>ACTIVITIES</strong></h2>
+    <div class="col-md-3 card-margin" *ngFor=" let activity of activities">
+        <div class="card">
+            <a routerLink="/activity-detail/{{activity.name}}/2"  (click)="render()">
+                <div class="card-body">
+
+                    <h4 class="card-title">{{activity.name}}</h4>
+
+                    <img [src]="activity.image" alt="image">
+
+
+
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,22 @@
+<!-- Home page food listing -->
+<div class="container">
+
+    <h2><strong>FOOD</strong></h2>
+    <div class="col-md-3 card-margin" *ngFor=" let food of foods">
+        <div class="card">
+            <a routerLink="/food-detail/{{food.name}}/3">
+                <div class="card-body">
+
+                    <h4 class="card-title">{{food.name}}</h4>
+
+                    <img [src]="food.image" alt="image">
+
+
+
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+</div>

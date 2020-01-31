@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<div *ngIf="show">
+  <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="searchbar">
+        <input type="text" id="getSearchData" class="search_input" name="search" placeholder="Search here...">
+        <span> <a routerLink="searchbarentity" (click)="getSearchedItem()" class="search_icon"><i class="fas fa-search"></i></a></span>
+      </div>
+    </div>
+  </div>
+  <div class="site_title">
+    {{this.tourist}}
+    <h1>NEW DELHI City Guide connects you with the Undiscovered,<br> Unexplored & High Definition New Delhi</h1>
+    <hr width="55%">
+    <p>
+      NEW DELHI HD – Best City Portal of New Delhi serves a platform to feature your vision in Delhi's new picture ,making what you do more<br /> enthusiastic to the crowd. Get the latest fashion, food, nightlife, lifestyle, academies and events in Delhi
+      at Delhi's first ever Hybrid<br> “Magatory Platform” ie combination of Digital Magazine & Directory.
+    </p>
+  </div>
+</div>
+<div *ngIf="!show">
+  <div class="card m-8 col-md-offset-5" style="width:20rem">
+    <h3>Searched results</h3>
+    <ul class="list-group" *ngFor="let e of entitylist">
+      <a *ngIf="e.categoryId == 1" routerLink="/tourist-detail/{{e.name}}/{{e.categoryId}}">
+        <li class="list-group-item">{{e.name}}</li>
+      </a>
+      <a *ngIf="e.categoryId == 2" routerLink="/activity-detail/{{e.name}}/{{e.categoryId}}">
+        <li class="list-group-item">{{e.name}}</li>
+      </a>
+      <a *ngIf="e.categoryId == 3" routerLink="/food-detail/{{e.name}}/{{e.categoryId}}">
+        <li class="list-group-item">{{e.name}}</li>
+      </a>
+      <a *ngIf="e.categoryId == 4" routerLink="/accommodation-detail/{{e.name}}/{{e.categoryId}}">
+        <li class="list-group-item">{{e.name}}</li>
+      </a>
+
+    </ul>
+  </div>
+</div>

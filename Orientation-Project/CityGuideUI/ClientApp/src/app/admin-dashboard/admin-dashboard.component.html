@@ -1,0 +1,13 @@
+<!-- Admin dashboard for adding entities -->
+<body>
+  <div class="one">
+    <button type="button" class="btn btn-primary"><a [routerLink]="['/admin-dashboard/touristplace-form']" > Add Tourist Entity</a></button> 
+    <button type="button" class="btn btn-success"><a [routerLink]="['/admin-dashboard/food-form']" > Add Food Entity</a></button> 
+    <button type="button" class="btn btn-warning"><a [routerLink]="['/admin-dashboard/accomodation-form']" > Add Accomodation Entity</a></button> 
+    <button type="button" class="btn btn-info"><a [routerLink]="['/admin-dashboard/activities-form']" > Add Activities Entity</a></button> 
+    <button type="button" class="btn btn-danger"><a [routerLink]="['/admin-dashboard/blogs-form']" > Add Blogs Entity</a></button> 
+  </div>
+  <router-outlet></router-outlet>
+</body>
+
+

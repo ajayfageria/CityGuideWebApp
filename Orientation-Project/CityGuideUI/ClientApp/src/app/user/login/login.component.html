@@ -1,0 +1,22 @@
+<!-- login form -->
+<h1 class="col-md-offset-4">User Login</h1>
+<form #form='ngForm' class="mb-4 col-md-offset-4" autocomplete="off" (submit)="onSubmit(form)">
+   
+    <div class="input-group input-group-md">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-user"></span>
+        </span>
+        <input class="form-control" #UserName="ngModel" name="UserName" placeholder="Username" [(ngModel)]="formModel.UserName" required>
+    </div><br>
+    <div class="input-group input-group-md">
+        <span class="input-group-addon">
+          <span class="glyphicon glyphicon-lock"></span>
+        </span>
+        <input type="password" class="form-control" #Password="ngModel" name="Password" placeholder="Password" [(ngModel)]="formModel.Password" required>
+    </div><br>
+    <div class="form-row">
+        <div class="form-group col-md-8 ">
+            <button type="submit" class="btn btn-dark btn-md btn-block col-md-offset-4">Login</button>
+        </div>
+    </div>
+</form>
